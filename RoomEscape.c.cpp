@@ -1,469 +1,474 @@
-# Æ÷ÇÔ  < stdio.h >
-# Æ÷ÇÔ  < stdlib.h >
-# Æ÷ÇÔ  < string.h >
-# Æ÷ÇÔ  < windows.h >
+/*
+ê°œë°œìž : ë°•ì§€ìš°, ìœ¤ë¯¼í˜, ì •ë¯¼íƒœ
+ê°œë°œì¼ : 2021.09.06.
+ë¬¸ì˜ : yoonmh0605@naver.com
+*/
+# í¬í•¨  < stdio.h >
+# í¬í•¨  < stdlib.h >
+# í¬í•¨  < string.h >
+# í¬í•¨  < windows.h >
 
-# TRUE 1À» Á¤ÀÇ  
-# FALSE 0 Á¤ÀÇ  
+# TRUE 1ì„ ì •ì˜  
+# FALSE 0 ì •ì˜  
 
-¹«È¿  ¼Ò°³ ();
-ºó  ¹æ ();
-ºó  ÇÁ·¹ÀÓ ();	// 1. ÀÌ »ç¶÷
-ºó  Ä§´ë ();		// 2. º¸È£
-ºó  ³ÃÀå°í ();	// 3. ¼öÁ¤Áß
-¹«È¿  ±Ý°í ();	// 4. ¼öÁ¤Áß  
-°øÇãÇÑ  ¿ÊÀå ();	// 5. ¼öÁ¤Áß
-º¸ÀÌµå  µµ¾î ();	// 6. ¼öÁ¤Áß
-¹«È¿  door_password ();
+ë¬´íš¨  ì†Œê°œ ();
+ë¹ˆ  ë°© ();
+ë¹ˆ  í”„ë ˆìž„ ();	// 1. ì´ ì‚¬ëžŒ
+ë¹ˆ  ì¹¨ëŒ€ ();		// 2. ë³´í˜¸
+ë¹ˆ  ëƒ‰ìž¥ê³  ();	// 3. ìˆ˜ì •ì¤‘
+ë¬´íš¨  ê¸ˆê³  ();	// 4. ìˆ˜ì •ì¤‘  
+ê³µí—ˆí•œ  ì˜·ìž¥ ();	// 5. ìˆ˜ì •ì¤‘
+ë³´ì´ë“œ  ë„ì–´ ();	// 6. ìˆ˜ì •ì¤‘
+ë¬´íš¨  door_password ();
 
-int isBrokenFrame = FALSE ;	// °¡Á¤»ó
-int isBrokenBed = FALSE ;	// Áß¿äÇÏ´Ù
+int isBrokenFrame = FALSE ;	// ê°€ì •ìƒ
+int isBrokenBed = FALSE ;	// ì¤‘ìš”í•˜ë‹¤
 
-int isFindMagnifyingGlass = FALSE ;	// ¹®ÀÇÇÏ±â
-int isFindGoldKey = FALSE ;		// ±Ý»ö ºß
-int isFindSilverKey = FALSE ; 	// Àº»ö ºí·¯µå
+int isFindMagnifyingGlass = FALSE ;	// ë¬¸ì˜í•˜ê¸°
+int isFindGoldKey = FALSE ;		// ê¸ˆìƒ‰ ë·”
+int isFindSilverKey = FALSE ; 	// ì€ìƒ‰ ë¸”ëŸ¬ë“œ
 
-int isOpenSafebox = FALSE ;		// ±Ý°í ±Ý°í
+int isOpenSafebox = FALSE ;		// ê¸ˆê³  ê¸ˆê³ 
 
-Á¤¼ö  ¸ÞÀÎ () {
-	int ¸Þ´º;
+ì •ìˆ˜  ë©”ì¸ () {
+	int ë©”ë‰´;
 	
-	µ¿¾È ( 1 ) {
-		printf ( " ºñ¹öÀÇ ¹æ \n\n " );
-		printf ( " 1. °ÔÀÓ ½ÃÀÛÇÏ±â \n " );
-		printf ( " 0. ¹éÈ­Á¡ ¾ÈÇØ \n " );
+	ë™ì•ˆ ( 1 ) {
+		printf ( " ë¹„ë²„ì˜ ë°© \n\n " );
+		printf ( " 1. ê²Œìž„ ì‹œìž‘í•˜ê¸° \n " );
+		printf ( " 0. ë°±í™”ì  ì•ˆí•´ \n " );
 		printf ( " >> " );
-		scanf ( " %d " , & ¸Þ´º);
+		scanf ( " %d " , & ë©”ë‰´);
 		
-		½ºÀ§Ä¡ (¸Þ´º) {
-			»ç·Ê  1 :
-				¼Ò°³ ();
-				¹æ ();
-				ÈÞ½Ä ;
-			»ç·Ê  0 :
-				 0 ¹ÝÈ¯ ;
-			±âº»°ª :
-				printf ( " ÀÔ·Â ¿À·ù \n\n " );
-				ÈÞ½Ä ;
+		ìŠ¤ìœ„ì¹˜ (ë©”ë‰´) {
+			ì‚¬ë¡€  1 :
+				ì†Œê°œ ();
+				ë°© ();
+				íœ´ì‹ ;
+			ì‚¬ë¡€  0 :
+				 0 ë°˜í™˜ ;
+			ê¸°ë³¸ê°’ :
+				printf ( " ìž…ë ¥ ì˜¤ë¥˜ \n\n " );
+				íœ´ì‹ ;
 		}
 	}
 	
 }
 
-¹«È¿  ¼Ò°³ () {
-	½Ã½ºÅÛ ( " cls " );
+ë¬´íš¨  ì†Œê°œ () {
+	ì‹œìŠ¤í…œ ( " cls " );
 	printf ( " \n\n " );
-	printf ( " ¿À´ÃÀº ¼Ò½ÇÀÌ '¹Ì¶õÀÌ¿Í °ø¿ø¿¡ °¡´Â ³¯'. \n\n " );
-	¼ö¸é ( 1500 );
-	printf ( " ¸Å°æ¸ÅÀå´ë¹Ú¿¡¼­ ±æÀ» Ã£´Ù. \n " );
-	¼ö¸é ( 2500 );
-	printf ( " ÈæÀÎ Á¶Á÷¿¡ °Å·¡ÇÏ´Â ÇöÀåÀ» ¹ß°ßÇÏ°í \n " );
-	¼ö¸é ( 1500 );
-	ÀÇ printf ( " »çÁøÀ» Âï°í µµ¸Á°¡ ·Á´ø Âû³ª¿¡ µÚÅë¼ö ¸¦ ¸Â¾Ò ´ç \ n \ n " );
-	¼ö¸é ( 2500 );
-	ÀÇ printf ( " ´«À» ¶° º¸´Ï ³¸¼± ¹æ¾È¿¡ µé¾î¿Í ÀÖ´Ù .. \ n " );
-	¼ö¸é ( 1500 );
-	printf ( " ºñ¹ö»çÁøÀÌ ÀÖ´Ù.. \n\n " );
-	¼ö¸é ( 1500 );
-	ÀÇ printf ( " ¿©±ä ¾îµðÁö .. ÀÌ°÷¿¡¼­ Å»ÃâÇØ¾ßµÈ´Ù ..? \ n \ n " );
-	¼ö¸é ( 1500 );
-	printf ( " Áý¿¡ ÂîÂî Ä¡Å²¹ßÀÌ ±â´Ù¸®°í ÀÖ´Ù!. \n\n " );
-	¼ö¸é ( 1500 );
-	½Ã½ºÅÛ ( " ÀÏ½Ã ÁßÁö " );
+	printf ( " ì˜¤ëŠ˜ì€ ì†Œì‹¤ì´ 'ë¯¸ëž€ì´ì™€ ê³µì›ì— ê°€ëŠ” ë‚ '. \n\n " );
+	ìˆ˜ë©´ ( 1500 );
+	printf ( " ë§¤ê²½ë§¤ìž¥ëŒ€ë°•ì—ì„œ ê¸¸ì„ ì°¾ë‹¤. \n " );
+	ìˆ˜ë©´ ( 2500 );
+	printf ( " í‘ì¸ ì¡°ì§ì— ê±°ëž˜í•˜ëŠ” í˜„ìž¥ì„ ë°œê²¬í•˜ê³  \n " );
+	ìˆ˜ë©´ ( 1500 );
+	ì˜ printf ( " ì‚¬ì§„ì„ ì°ê³  ë„ë§ê°€ ë ¤ë˜ ì°°ë‚˜ì— ë’¤í†µìˆ˜ ë¥¼ ë§žì•˜ ë‹¹ \ n \ n " );
+	ìˆ˜ë©´ ( 2500 );
+	ì˜ printf ( " ëˆˆì„ ë–  ë³´ë‹ˆ ë‚¯ì„  ë°©ì•ˆì— ë“¤ì–´ì™€ ìžˆë‹¤ .. \ n " );
+	ìˆ˜ë©´ ( 1500 );
+	printf ( " ë¹„ë²„ì‚¬ì§„ì´ ìžˆë‹¤.. \n\n " );
+	ìˆ˜ë©´ ( 1500 );
+	ì˜ printf ( " ì—¬ê¸´ ì–´ë””ì§€ .. ì´ê³³ì—ì„œ íƒˆì¶œí•´ì•¼ëœë‹¤ ..? \ n \ n " );
+	ìˆ˜ë©´ ( 1500 );
+	printf ( " ì§‘ì— ì°Œì°Œ ì¹˜í‚¨ë°œì´ ê¸°ë‹¤ë¦¬ê³  ìžˆë‹¤!. \n\n " );
+	ìˆ˜ë©´ ( 1500 );
+	ì‹œìŠ¤í…œ ( " ì¼ì‹œ ì¤‘ì§€ " );
 }
 
-°øÇãÇÑ  ¹æ () {
-	int ¸Þ´º;
+ê³µí—ˆí•œ  ë°© () {
+	int ë©”ë‰´;
 	
-	µ¿¾È ( 1 ) {
-		½Ã½ºÅÛ ( " cls " );	
-		printf ( " [ºñ¹öÀÇ ¹æ] \n\n " );
-		printf ( " ¹æ¿¡¼­ ÇÒ ¼ö ÀÖ´Â ÀÌ¸§: \n\n " );
-		printf ( " 1. ÄÄÇ»ÅÍ 2. ¶ó²Ù¶ó²Ù 3. ¿¢¼Ò \n " );
-		printf ( " 4. È­Àå½Ç 5. ½½¶óÀÌµù 6. ¾Û \n " );
+	ë™ì•ˆ ( 1 ) {
+		ì‹œìŠ¤í…œ ( " cls " );	
+		printf ( " [ë¹„ë²„ì˜ ë°©] \n\n " );
+		printf ( " ë°©ì—ì„œ í•  ìˆ˜ ìžˆëŠ” ì´ë¦„: \n\n " );
+		printf ( " 1. ì»´í“¨í„° 2. ë¼ê¾¸ë¼ê¾¸ 3. ì—‘ì†Œ \n " );
+		printf ( " 4. í™”ìž¥ì‹¤ 5. ìŠ¬ë¼ì´ë”© 6. ì•± \n " );
 			
 		printf ( " >> " );
-		scanf ( " %d " , & ¸Þ´º);
+		scanf ( " %d " , & ë©”ë‰´);
 		
-		½ºÀ§Ä¡ (¸Þ´º) {
-			»ç·Ê  1 :
+		ìŠ¤ìœ„ì¹˜ (ë©”ë‰´) {
+			ì‚¬ë¡€  1 :
 				if (isBrokenFrame) {
-					printf ( " \n ´õ ÀÌ»ó À¯ÁöµÇÁö ¾Ê½À´Ï´Ù. \n " );
-					½Ã½ºÅÛ ( " ÀÏ½Ã ÁßÁö " );
-				} ´Ù¸¥ {
-					ÇÁ·¹ÀÓ ();					
+					printf ( " \n ë” ì´ìƒ ìœ ì§€ë˜ì§€ ì•ŠìŠµë‹ˆë‹¤. \n " );
+					ì‹œìŠ¤í…œ ( " ì¼ì‹œ ì¤‘ì§€ " );
+				} ë‹¤ë¥¸ {
+					í”„ë ˆìž„ ();					
 				}
-				ÈÞ½Ä ;
-			»ç·Ê  2 :
-				Ä§´ë ();
-				ÈÞ½Ä ;
-			»ç·Ê  3 :
-				³ÃÀå°í ();
-				ÈÞ½Ä ;
-			»ç·Ê  4 :
-				±Ý°í ();
-				ÈÞ½Ä ;
-			»ç·Ê  5 :
-				¿ÊÀå ();
-				ÈÞ½Ä ;
-			»ç·Ê  6 :
-				¹® ();
-				ÈÞ½Ä ;
-			±âº»°ª :
-				printf ( " \n # ERROR # ÀÔ·Â°ª ¿À·ù \n " );
-				½Ã½ºÅÛ ( " ÀÏ½Ã ÁßÁö " );
+				íœ´ì‹ ;
+			ì‚¬ë¡€  2 :
+				ì¹¨ëŒ€ ();
+				íœ´ì‹ ;
+			ì‚¬ë¡€  3 :
+				ëƒ‰ìž¥ê³  ();
+				íœ´ì‹ ;
+			ì‚¬ë¡€  4 :
+				ê¸ˆê³  ();
+				íœ´ì‹ ;
+			ì‚¬ë¡€  5 :
+				ì˜·ìž¥ ();
+				íœ´ì‹ ;
+			ì‚¬ë¡€  6 :
+				ë¬¸ ();
+				íœ´ì‹ ;
+			ê¸°ë³¸ê°’ :
+				printf ( " \n # ERROR # ìž…ë ¥ê°’ ì˜¤ë¥˜ \n " );
+				ì‹œìŠ¤í…œ ( " ì¼ì‹œ ì¤‘ì§€ " );
 		}
 	}
 	
 }
 
-void  frame (){ // 1. Ã¥»ó
-	int ¸Þ´º;
+void  frame (){ // 1. ì±…ìƒ
+	int ë©”ë‰´;
 	
-	µ¿¾È ( 1 ) {
-		½Ã½ºÅÛ ( " cls " );
-		printf ( " [ºñ¹öÀÇ ¹æ]-[Ã¥»ó] \n\n " );
-		printf ( " Å«Ã¥»óÀÌ ÀÖ´Ù. \n\n " );
-		printf ( " 1. ÄÄÇ»ÅÍ¸¦ ¸ÂÃß´Ù \n " );
-		printf ( " 2. ÄÄÇ»ÅÍ¸¦ ºÎ¼ø´Ù \n " );
-		printf ( " 0. ÀÌÀü ±â \n " )
+	ë™ì•ˆ ( 1 ) {
+		ì‹œìŠ¤í…œ ( " cls " );
+		printf ( " [ë¹„ë²„ì˜ ë°©]-[ì±…ìƒ] \n\n " );
+		printf ( " í°ì±…ìƒì´ ìžˆë‹¤. \n\n " );
+		printf ( " 1. ì»´í“¨í„°ë¥¼ ë§žì¶”ë‹¤ \n " );
+		printf ( " 2. ì»´í“¨í„°ë¥¼ ë¶€ìˆœë‹¤ \n " );
+		printf ( " 0. ì´ì „ ê¸° \n " )
 		
 		printf ( " >> " );
-		scanf ( " %d " , & ¸Þ´º);
+		scanf ( " %d " , & ë©”ë‰´);
 		
-		½ºÀ§Ä¡ (¸Þ´º) {
-			»ç·Ê  1 :
+		ìŠ¤ìœ„ì¹˜ (ë©”ë‰´) {
+			ì‚¬ë¡€  1 :
 				if (isFindMagnifyingGlass) {
-				} ´Ù¸¥ {
-					printf ( " \n ÄÄÇ»ÅÍ¿¡´Â º°°Å ¾ø´Â °Í °°´Ù . \n\n " );
+				} ë‹¤ë¥¸ {
+					printf ( " \n ì»´í“¨í„°ì—ëŠ” ë³„ê±° ì—†ëŠ” ê²ƒ ê°™ë‹¤ . \n\n " );
 				}
-				ÈÞ½Ä ;
-			»ç·Ê  2 :
-				isBrokenFrame = Âü ;
-				printf ( " \n ÄÄÇ»ÅÍ. ÆÄ±«µÈ´Ù.. \n " );
-				printf ( " Å©½î!!! Ã¶Á¦ Ã¥»óÀÌ ¿Ï¼ºµµ!! \n\n " );
-				ÀÇ printf ( " Á»´õ ·¹º§ ¾÷À»ÇØ¾ß µÉ°Å °°´Ù. \ n \ n " );
-				½Ã½ºÅÛ ( " ÀÏ½Ã ÁßÁö " );
-				¹ÝÈ¯ ;
-			»ç·Ê  0 :
-				¹ÝÈ¯ ;
-			±âº»°ª :
-				printf ( " \n ±Ã±ØÀûÀÎ È¿1 \n\n " );
-				ÈÞ½Ä ;
+				íœ´ì‹ ;
+			ì‚¬ë¡€  2 :
+				isBrokenFrame = ì°¸ ;
+				printf ( " \n ì»´í“¨í„°. íŒŒê´´ëœë‹¤.. \n " );
+				printf ( " í¬ì˜!!! ì² ì œ ì±…ìƒì´ ì™„ì„±ë„!! \n\n " );
+				ì˜ printf ( " ì¢€ë” ë ˆë²¨ ì—…ì„í•´ì•¼ ë ê±° ê°™ë‹¤. \ n \ n " );
+				ì‹œìŠ¤í…œ ( " ì¼ì‹œ ì¤‘ì§€ " );
+				ë°˜í™˜ ;
+			ì‚¬ë¡€  0 :
+				ë°˜í™˜ ;
+			ê¸°ë³¸ê°’ :
+				printf ( " \n ê¶ê·¹ì ì¸ íš¨1 \n\n " );
+				íœ´ì‹ ;
 		}
-		½Ã½ºÅÛ ( " ÀÏ½Ã ÁßÁö " );
+		ì‹œìŠ¤í…œ ( " ì¼ì‹œ ì¤‘ì§€ " );
 	}	
 }	
 
-ºó  Ä§´ë () { // 2. Ä§´ë
-	int ¸Þ´º;
+ë¹ˆ  ì¹¨ëŒ€ () { // 2. ì¹¨ëŒ€
+	int ë©”ë‰´;
 	
-	µ¿¾È ( 1 ) {
-		½Ã½ºÅÛ ( " cls " );
-		printf ( " [¿ø·ë]-[¶ó²Ù¶ó²Ù¼î] \n\n " );
-		printf ( " ¿¡ ¶ó²Ù¶ó²Ù ¼îÆÄ°¡. \n\n " );
-		printf ( " 1. ¶ó²Ù¶ó²Ù²Ù²Ù¶ó²Ù´Ù \n " );
-		printf ( " 2. ¶ó²Ù¶ó²Ù´Ù \n " );
-		printf ( " 3. ÀÌºÒÀ» ÃÖÀû´Ù \n " );
-		printf ( " 0. ÀÌÀü ±â \n " )
+	ë™ì•ˆ ( 1 ) {
+		ì‹œìŠ¤í…œ ( " cls " );
+		printf ( " [ì›ë£¸]-[ë¼ê¾¸ë¼ê¾¸ì‡¼] \n\n " );
+		printf ( " ì— ë¼ê¾¸ë¼ê¾¸ ì‡¼íŒŒê°€. \n\n " );
+		printf ( " 1. ë¼ê¾¸ë¼ê¾¸ê¾¸ê¾¸ë¼ê¾¸ë‹¤ \n " );
+		printf ( " 2. ë¼ê¾¸ë¼ê¾¸ë‹¤ \n " );
+		printf ( " 3. ì´ë¶ˆì„ ìµœì ë‹¤ \n " );
+		printf ( " 0. ì´ì „ ê¸° \n " )
 		
 		printf ( " >> " );
-		scanf ( " %d " , & ¸Þ´º);
+		scanf ( " %d " , & ë©”ë‰´);
 		
-		½ºÀ§Ä¡ (¸Þ´º) {
-			»ç·Ê  1 :
+		ìŠ¤ìœ„ì¹˜ (ë©”ë‰´) {
+			ì‚¬ë¡€  1 :
 				if (isBrokenBed) {
-					ÀÇ printf ( " \ n ¶ó²Ù¶ó²Ù Ä§´ë´Â ÆÄ±«µÇ¾ú´Ù .. \ n \ n " );
-				} ´Ù¸¥ {
-					printf ( " \n ¸ÕÁö°¡ °¡µæÇÏ´Ù ¾î¿ì´õ·¯. \n " );	
+					ì˜ printf ( " \ n ë¼ê¾¸ë¼ê¾¸ ì¹¨ëŒ€ëŠ” íŒŒê´´ë˜ì—ˆë‹¤ .. \ n \ n " );
+				} ë‹¤ë¥¸ {
+					printf ( " \n ë¨¼ì§€ê°€ ê°€ë“í•˜ë‹¤ ì–´ìš°ë”ëŸ¬. \n " );	
 				}
-				½Ã½ºÅÛ ( " ÀÏ½Ã ÁßÁö " );
-				ÈÞ½Ä ;
-			»ç·Ê  2 :
+				ì‹œìŠ¤í…œ ( " ì¼ì‹œ ì¤‘ì§€ " );
+				íœ´ì‹ ;
+			ì‚¬ë¡€  2 :
 				if (isBrokenBed) {
-					ÀÇ printf ( " \ n Ä§´ë°¡ ºÎ¼­Á®¼­ ´õ ÀÌ»ó Ã£À» ¼ö ¾ø´Ù. \ n \ n " );
-				} ´Ù¸¥ {
-					½Ã½ºÅÛ ( " cls " );
-					printf ( " [¿ø·ë]-[¼îÆÄ]-[¼îÆÄ] \n\n " );
-					printf ( " \n º¸Åë ' ²Ù¶ó²Ù¶ó²Ù¶ó' . \n\n " );
-					printf ( " 1. °ûÀ» ¡ºÆÄ±« ¡». \n " );
-					printf ( " 2. ÇÁ·¹ÀÓÀ» ¡º »ì·Á ¡» . \n " );
+					ì˜ printf ( " \ n ì¹¨ëŒ€ê°€ ë¶€ì„œì ¸ì„œ ë” ì´ìƒ ì°¾ì„ ìˆ˜ ì—†ë‹¤. \ n \ n " );
+				} ë‹¤ë¥¸ {
+					ì‹œìŠ¤í…œ ( " cls " );
+					printf ( " [ì›ë£¸]-[ì‡¼íŒŒ]-[ì‡¼íŒŒ] \n\n " );
+					printf ( " \n ë³´í†µ ' ê¾¸ë¼ê¾¸ë¼ê¾¸ë¼' . \n\n " );
+					printf ( " 1. ê³½ì„ ã€ŽíŒŒê´´ ã€. \n " );
+					printf ( " 2. í”„ë ˆìž„ì„ ã€Ž ì‚´ë ¤ ã€ . \n " );
 					printf ( " >> " );
-					scanf ( " %d " , & ¸Þ´º);
+					scanf ( " %d " , & ë©”ë‰´);
 					
-					½ºÀ§Ä¡ (¸Þ´º) {
-						»ç·Ê  1 :
-							isBrokenBed = Âü ;	// ÇöÀç ¼ö¸í
-							printf ( " \n # °© °© " ); \n\n " )
-							printf ( " 1. ÀÜÇØ¸¦ µÚ·Î. \n " );
-							printf ( " 2. ¸Ó¹µ°Å¸®´Ù. \n " );
+					ìŠ¤ìœ„ì¹˜ (ë©”ë‰´) {
+						ì‚¬ë¡€  1 :
+							isBrokenBed = ì°¸ ;	// í˜„ìž¬ ìˆ˜ëª…
+							printf ( " \n # ê°‘ ê°‘ " ); \n\n " )
+							printf ( " 1. ìž”í•´ë¥¼ ë’¤ë¡œ. \n " );
+							printf ( " 2. ë¨¸ë­‡ê±°ë¦¬ë‹¤. \n " );
 							printf ( " >> " );
-							scanf ( " %d " , & ¸Þ´º);
+							scanf ( " %d " , & ë©”ë‰´);
 							
-							½ºÀ§Ä¡ (¸Þ´º) {
-								»ç·Ê  1 :
-									printf ( " \n ¸Þ¸ðÀå. ¶°¿À¸£´Â »ý°¢Àº? \n " );
-									printf ( " ¾Æ¹«°Íµµ ¾ø´Â...Å©Å©??? \n " );
-									printf ( " ¿ù = 3 \n È­ = 5 \n ¼ö = 4 \n ¸ñ = ? \n\n " );
-									printf ( " EZÇÏ³ë \n " );
-									ÈÞ½Ä ;
-								»ç·Ê  2 :
-									printf ( " \n ³ªÀÌ ÀÏÁ¤´Ù. ³ªÀÌ µÎÀÚ. \n\n " );
-									ÈÞ½Ä ;
-							±âº»°ª :
-								printf ( " \n °áÁ¤ À» ³»¸®±â. \n\n " );
-								ÈÞ½Ä ;
+							ìŠ¤ìœ„ì¹˜ (ë©”ë‰´) {
+								ì‚¬ë¡€  1 :
+									printf ( " \n ë©”ëª¨ìž¥. ë– ì˜¤ë¥´ëŠ” ìƒê°ì€? \n " );
+									printf ( " ì•„ë¬´ê²ƒë„ ì—†ëŠ”...í¬í¬??? \n " );
+									printf ( " ì›” = 3 \n í™” = 5 \n ìˆ˜ = 4 \n ëª© = ? \n\n " );
+									printf ( " EZí•˜ë…¸ \n " );
+									íœ´ì‹ ;
+								ì‚¬ë¡€  2 :
+									printf ( " \n ë‚˜ì´ ì¼ì •ë‹¤. ë‚˜ì´ ë‘ìž. \n\n " );
+									íœ´ì‹ ;
+							ê¸°ë³¸ê°’ :
+								printf ( " \n ê²°ì • ì„ ë‚´ë¦¬ê¸°. \n\n " );
+								íœ´ì‹ ;
 							}
-							ÈÞ½Ä ;
-						»ç·Ê  2 :
-							printf ( " \n ¿ÍÅ¸½Ã°¡ ¡º»ýÁ¸¡»À» °­Á¶ÇÏÁö ¸»¶ó°í... \n\n " );
-							ÈÞ½Ä ;
-						±âº»°ª :
-							printf ( " \n °áÁ¤ À» ³»¸®±â. \n\n " );
-							ÈÞ½Ä ;
+							íœ´ì‹ ;
+						ì‚¬ë¡€  2 :
+							printf ( " \n ì™€íƒ€ì‹œê°€ ã€Žìƒì¡´ã€ì„ ê°•ì¡°í•˜ì§€ ë§ë¼ê³ ... \n\n " );
+							íœ´ì‹ ;
+						ê¸°ë³¸ê°’ :
+							printf ( " \n ê²°ì • ì„ ë‚´ë¦¬ê¸°. \n\n " );
+							íœ´ì‹ ;
 					}	
 				}
-				½Ã½ºÅÛ ( " ÀÏ½Ã ÁßÁö " );
-				ÈÞ½Ä ;		
-			»ç·Ê  3 :
-				½Ã½ºÅÛ ( " cls " );
-				printf ( " [¿ø·ë]-[¼î]-[ÀÌºÒ] \n\n " );
-				ÀÇ printf ( " \ n º£°³¿¡¼­´Â Æ¯ÀÌÇÑ Á¡ÀÌ º¸ÀÌÁö ¾Ê´Â´Ù. \ n \ n " );
-				printf ( " 1. ÀÌºÒ »çÀÌ¸¦ µÚµ¹¾Æ \n " );
-				ÀÇ printf ( " 2. ÀÌºÒÀ» Âõ¾î ¹ö¸°´Ù \ n " );
+				ì‹œìŠ¤í…œ ( " ì¼ì‹œ ì¤‘ì§€ " );
+				íœ´ì‹ ;		
+			ì‚¬ë¡€  3 :
+				ì‹œìŠ¤í…œ ( " cls " );
+				printf ( " [ì›ë£¸]-[ì‡¼]-[ì´ë¶ˆ] \n\n " );
+				ì˜ printf ( " \ n ë² ê°œì—ì„œëŠ” íŠ¹ì´í•œ ì ì´ ë³´ì´ì§€ ì•ŠëŠ”ë‹¤. \ n \ n " );
+				printf ( " 1. ì´ë¶ˆ ì‚¬ì´ë¥¼ ë’¤ëŒì•„ \n " );
+				ì˜ printf ( " 2. ì´ë¶ˆì„ ì°¢ì–´ ë²„ë¦°ë‹¤ \ n " );
 				printf ( " >> " );
-				scanf ( " %d " , & ¸Þ´º);
+				scanf ( " %d " , & ë©”ë‰´);
 				
-				½ºÀ§Ä¡ (¸Þ´º) {
-					»ç·Ê  1 :
+				ìŠ¤ìœ„ì¹˜ (ë©”ë‰´) {
+					ì‚¬ë¡€  1 :
 						if (isFindGoldKey) {
-							printf ( " \n ¿¹»óÄ¡ ¸øÇÑ »óÈ²¿¡¼­µµ . \n\n " );
-						} ´Ù¸¥ {
-							isFindGoldKey = Âü ;	// ±Ý»ö
-							printf ( " \n ÀÌºÒ ¾ö¸¶´Â Ã³À½À¸·Î ¹ß°ßÇß½À´Ï´Ù. °­·ÂÇÏ°Ô ÃßÃµÇÏ¼Ì½À´Ï±î? \n\n " );
+							printf ( " \n ì˜ˆìƒì¹˜ ëª»í•œ ìƒí™©ì—ì„œë„ . \n\n " );
+						} ë‹¤ë¥¸ {
+							isFindGoldKey = ì°¸ ;	// ê¸ˆìƒ‰
+							printf ( " \n ì´ë¶ˆ ì—„ë§ˆëŠ” ì²˜ìŒìœ¼ë¡œ ë°œê²¬í–ˆìŠµë‹ˆë‹¤. ê°•ë ¥í•˜ê²Œ ì¶”ì²œí•˜ì…¨ìŠµë‹ˆê¹Œ? \n\n " );
 						}
-						ÈÞ½Ä ;
-					»ç·Ê  2 :
-						printf ( " \n ". " ³»ºñµÎÀÚ. \n\n " );
-						ÈÞ½Ä ;
-					±âº»°ª :
-						printf ( " \n ¾Æ¸ô¶û. ÀÌÀü ÀÚ. \n\n " );
-						ÈÞ½Ä ;
+						íœ´ì‹ ;
+					ì‚¬ë¡€  2 :
+						printf ( " \n ". " ë‚´ë¹„ë‘ìž. \n\n " );
+						íœ´ì‹ ;
+					ê¸°ë³¸ê°’ :
+						printf ( " \n ì•„ëª°ëž‘. ì´ì „ ìž. \n\n " );
+						íœ´ì‹ ;
 						
 				}
-				½Ã½ºÅÛ ( " ÀÏ½Ã ÁßÁö " );
-				ÈÞ½Ä ;
-			»ç·Ê  0 :
-				¹ÝÈ¯ ;
-			±âº»°ª :
-				printf ( " #¿À·ù #¾Æ¾Æ¾Æ¾Æ¾Æ \n\n " );
-				½Ã½ºÅÛ ( " ÀÏ½Ã ÁßÁö " );
+				ì‹œìŠ¤í…œ ( " ì¼ì‹œ ì¤‘ì§€ " );
+				íœ´ì‹ ;
+			ì‚¬ë¡€  0 :
+				ë°˜í™˜ ;
+			ê¸°ë³¸ê°’ :
+				printf ( " #ì˜¤ë¥˜ #ì•„ì•„ì•„ì•„ì•„ \n\n " );
+				ì‹œìŠ¤í…œ ( " ì¼ì‹œ ì¤‘ì§€ " );
 		}
 	}
 }		
 
-void  ³ÃÀå°í (){ // 3. ³ÃÀå°í
-	int ¸Þ´º;
+void  ëƒ‰ìž¥ê³  (){ // 3. ëƒ‰ìž¥ê³ 
+	int ë©”ë‰´;
 	
-	µ¿¾È ( 1 ) {
-		½Ã½ºÅÛ ( " cls " );
-		printf ( " [ºñ¹öÀÇ ¹æ]-[³ÃÀå°í ] \n\n " );
-		ÀÇ printf ( " LG ½Å»ó ³ÃÀå°í°¡ ¹æ ÇÑÄÒ¿¡ÀÖ´Ù ¹¹°¡ ÀÖ´ÂÁö º¼±î³¶ . \ n " );
-		printf ( " Çªµå ÇÃ·¹ÀÌ½º °©. \n\n " );
-		printf ( " 1. LPG ¸¦ ÃÖÀû ´Ù \n " );
-		printf ( " 2. ÇØ¹°ÅÁÀ» ´Ù´Ù \n " );
-		ÀÇ printf ( " 3. »ç°ú¸¦ »ìÆì º»´Ù \ n " );
-		printf ( " 4. ´ºÆ®¸®¾Æ¾ÕÀ» ´Ù´Ù \n " );
-		printf ( " 5. ´ß¹ßÀ» ´ÙÄ£´Ù \n " ) ;
-		printf ( " 0. ÀÌÀü ±â \n " )
+	ë™ì•ˆ ( 1 ) {
+		ì‹œìŠ¤í…œ ( " cls " );
+		printf ( " [ë¹„ë²„ì˜ ë°©]-[ëƒ‰ìž¥ê³  ] \n\n " );
+		ì˜ printf ( " LG ì‹ ìƒ ëƒ‰ìž¥ê³ ê°€ ë°© í•œì¼ ì—ìžˆë‹¤ ë­ê°€ ìžˆëŠ”ì§€ ë³¼ê¹Œë‚­ . \ n " );
+		printf ( " í‘¸ë“œ í”Œë ˆì´ìŠ¤ ê°‘. \n\n " );
+		printf ( " 1. LPG ë¥¼ ìµœì  ë‹¤ \n " );
+		printf ( " 2. í•´ë¬¼íƒ•ì„ ë‹¤ë‹¤ \n " );
+		ì˜ printf ( " 3. ì‚¬ê³¼ë¥¼ ì‚´íŽ´ ë³¸ë‹¤ \ n " );
+		printf ( " 4. ë‰´íŠ¸ë¦¬ì•„ì•žì„ ë‹¤ë‹¤ \n " );
+		printf ( " 5. ë‹­ë°œì„ ë‹¤ì¹œë‹¤ \n " ) ;
+		printf ( " 0. ì´ì „ ê¸° \n " )
 		
 		printf ( " >> " );
-		scanf ( " %d " , & ¸Þ´º);
+		scanf ( " %d " , & ë©”ë‰´);
 		
-		½ºÀ§Ä¡ (¸Þ´º) {
-			»ç·Ê  1 :
+		ìŠ¤ìœ„ì¹˜ (ë©”ë‰´) {
+			ì‚¬ë¡€  1 :
 				printf ( " \n\n " );
-				printf ( " \n ÀÌ°Ô ¿Ö ¿©±â ÀÖ´Â °É ¼öÇöÀÌ ÁýÀÎ°¡? \n\n " );
-				ÈÞ½Ä ;
-			»ç·Ê  2 :
-				printf ( " \n ¹°ºñ¸°ÀÌ ÀïÀïÇÑ °Ç°¡?.. \n\n " );
-				ÈÞ½Ä ;
-			»ç·Ê  3 :
-				printf ( " \n ¾ßµå°¡ Æ²µü´Ù Ã¼¸®´Ù ±¤°í ÇÏ°í ÀÖ´Ù.. \n\n " );
-				ÈÞ½Ä ;
-			»ç·Ê  4 :
-				printf ( " \n ´Ù2 ºùÀ» ½ÅÃ»ÇÏ´Â »ç¶÷.. \n\n " );
-				ÈÞ½Ä ;
-			»ç·Ê  5 :
-				ÀÇ printf ( " \ n »óÇ¥ ¸¸ ÂîÂî ´ß¹ßÀÌ°í ÂÞÂÞ ´ß¹ß ÀÌ¿´´Ù. \ n ¾ó¸¥ ³ª°¡¼­ Âî´ßÀ» ¸Ô¾î¾ß °Ú¾î! \ n \ n " );
-				ÈÞ½Ä ;
-			»ç·Ê  0 :
-				¹ÝÈ¯ ;
-			±âº»°ª :
-				printf ( " \n qudtls ¤»¤» \n\n " );
-				ÈÞ½Ä ;
+				printf ( " \n ì´ê²Œ ì™œ ì—¬ê¸° ìžˆëŠ” ê±¸ ìˆ˜í˜„ì´ ì§‘ì¸ê°€? \n\n " );
+				íœ´ì‹ ;
+			ì‚¬ë¡€  2 :
+				printf ( " \n ë¬¼ë¹„ë¦°ì´ ìŸìŸí•œ ê±´ê°€?.. \n\n " );
+				íœ´ì‹ ;
+			ì‚¬ë¡€  3 :
+				printf ( " \n ì•¼ë“œê°€ í‹€ë”±ë‹¤ ì²´ë¦¬ë‹¤ ê´‘ê³  í•˜ê³  ìžˆë‹¤.. \n\n " );
+				íœ´ì‹ ;
+			ì‚¬ë¡€  4 :
+				printf ( " \n ë‹¤2 ë¹™ì„ ì‹ ì²­í•˜ëŠ” ì‚¬ëžŒ.. \n\n " );
+				íœ´ì‹ ;
+			ì‚¬ë¡€  5 :
+				ì˜ printf ( " \ n ìƒí‘œ ë§Œ ì°Œì°Œ ë‹­ë°œì´ê³  ì­ˆì­ˆ ë‹­ë°œ ì´ì˜€ë‹¤. \ n ì–¼ë¥¸ ë‚˜ê°€ì„œ ì°Œë‹­ì„ ë¨¹ì–´ì•¼ ê² ì–´! \ n \ n " );
+				íœ´ì‹ ;
+			ì‚¬ë¡€  0 :
+				ë°˜í™˜ ;
+			ê¸°ë³¸ê°’ :
+				printf ( " \n qudtls ã…‹ã…‹ \n\n " );
+				íœ´ì‹ ;
 		}
-		½Ã½ºÅÛ ( " ÀÏ½Ã ÁßÁö " );
+		ì‹œìŠ¤í…œ ( " ì¼ì‹œ ì¤‘ì§€ " );
 	}
 }	
 
-¹«È¿  safebox () { // 4. Àå½Ç
-	int ¸Þ´º;
+ë¬´íš¨  safebox () { // 4. ìž¥ì‹¤
+	int ë©”ë‰´;
 	
-	µ¿¾È ( 1 ) {
-		½Ã½ºÅÛ ( " cls " );
-		printf ( " [ºñ¹öÀÇ ¹æ]-[È­Àå½Ç] \n " );
-		printf ( " ¹°ºñ¸°³»°¡ ³ª´Â È­Àå½ÇÀÌ´Ù. \n\n " );
-		printf ( " 1. È­Àå½Ç ¹®À» ¿¬´Ù \n " );
-		printf ( " 2. È­Àå½Ç ¹®À» ºÎ¼ø´Ù \n " );
-		printf ( " 3. È­Àå½Ç ¹®À» ´Ù´Ù \n " );
-		printf ( " 0. ÀÌÀü ±â \n " )
+	ë™ì•ˆ ( 1 ) {
+		ì‹œìŠ¤í…œ ( " cls " );
+		printf ( " [ë¹„ë²„ì˜ ë°©]-[í™”ìž¥ì‹¤] \n " );
+		printf ( " ë¬¼ë¹„ë¦°ë‚´ê°€ ë‚˜ëŠ” í™”ìž¥ì‹¤ì´ë‹¤. \n\n " );
+		printf ( " 1. í™”ìž¥ì‹¤ ë¬¸ì„ ì—°ë‹¤ \n " );
+		printf ( " 2. í™”ìž¥ì‹¤ ë¬¸ì„ ë¶€ìˆœë‹¤ \n " );
+		printf ( " 3. í™”ìž¥ì‹¤ ë¬¸ì„ ë‹¤ë‹¤ \n " );
+		printf ( " 0. ì´ì „ ê¸° \n " )
 		
 		printf ( " >> " );
-		scanf ( " %d " , & ¸Þ´º);
+		scanf ( " %d " , & ë©”ë‰´);
 		
-		½ºÀ§Ä¡ (¸Þ´º) {
-			»ç·Ê  1 :
+		ìŠ¤ìœ„ì¹˜ (ë©”ë‰´) {
+			ì‚¬ë¡€  1 :
 				if (isOpenSafebox) {
-					ÀÇ printf ( " \ n ÀÀ ÀÌ¹Ì ¿­¾ú ¾î ¤»¤» ±î¸Ô¾ú À¸¸é ´Ù½Ã ÇÏ¼À ¤»¤» . \ n \ n " );
-					ÈÞ½Ä ;
+					ì˜ printf ( " \ n ì‘ ì´ë¯¸ ì—´ì—ˆ ì–´ ã…‹ã…‹ ê¹Œë¨¹ì—ˆ ìœ¼ë©´ ë‹¤ì‹œ í•˜ì…ˆ ã…‹ã…‹ . \ n \ n " );
+					íœ´ì‹ ;
 				}
 				if (isFindGoldKey && isFindSilverKey) {
-					isFindMagnifyingGlass = Âü ;	// È­Àå½Ç Ã£±â
-					isOpenSafebox = Âü ;	// ÀÏÁ¤Ç¥¿­
-					ÀÇ printf ( " \ n È­Àå½Ç ¼¼¸é´ë¿¡ ¸Þ¸ðÀåÀÌÀÖ´Ù \ n " );	
-					ÀÇ printf ( " ¸Þ¸ðÁö¿¡´Â Å« ±Û¾¾·Î ±ÛÀÌ ÀûÇô ÀÖ´Ù . \ n \ n " );
-					printf ( " 'ÇÏÃ÷³×¹ÌÄíÀÇ ³ªÀÌ´Â?. \n ¤»¤»°³½±³× \n " );
-					ÀÇ printf ( " »¡¸® Ç®°í Âî´ß ¸ÔÀ¸·¯ °¡¾ßÂ¡ ' \ n \ n " );
-					printf ( " ºÎÈ÷?RºÎÈ÷?R ÈÄÇì?m \n\n " );					
-				} ´Ù¸¥ {
-					ÀÇ printf ( " \ n È­Àå½Ç¿¡ ¿­¼è°¡ ¿Ö 2 °³³ª ÇÊ¿ä ÇÏ³Ä°í !!. \ n \ n " );
+					isFindMagnifyingGlass = ì°¸ ;	// í™”ìž¥ì‹¤ ì°¾ê¸°
+					isOpenSafebox = ì°¸ ;	// ì¼ì •í‘œì—´
+					ì˜ printf ( " \ n í™”ìž¥ì‹¤ ì„¸ë©´ëŒ€ì— ë©”ëª¨ìž¥ì´ìžˆë‹¤ \ n " );	
+					ì˜ printf ( " ë©”ëª¨ì§€ì—ëŠ” í° ê¸€ì”¨ë¡œ ê¸€ì´ ì í˜€ ìžˆë‹¤ . \ n \ n " );
+					printf ( " 'í•˜ì¸ ë„¤ë¯¸ì¿ ì˜ ë‚˜ì´ëŠ”?. \n ã…‹ã…‹ê°œì‰½ë„¤ \n " );
+					ì˜ printf ( " ë¹¨ë¦¬ í’€ê³  ì°Œë‹­ ë¨¹ìœ¼ëŸ¬ ê°€ì•¼ì§• ' \ n \ n " );
+					printf ( " ë¶€ížˆ?Rë¶€ížˆ?R í›„í—¤?m \n\n " );					
+				} ë‹¤ë¥¸ {
+					ì˜ printf ( " \ n í™”ìž¥ì‹¤ì— ì—´ì‡ ê°€ ì™œ 2 ê°œë‚˜ í•„ìš” í•˜ëƒê³  !!. \ n \ n " );
 				}
-				ÈÞ½Ä ;
-			»ç·Ê  2 :
-				printf ( " \n¡ºÆÄ±«¡»ÇØ¾ß ÇÒ ±º \n\n " );
-				printf ( " \n Å© ½î!!! ¹º³ð¿¡ ÁýÀÌÀü´Ù Ã¶·Î¾î \n\n " );
-				ÈÞ½Ä ;
-			»ç·Ê  3 :
-				printf ( " \n ¾Æ´Ï ¾Æ´Ï µæµ¥¿¡ ÇÃ·¹ÀÌ½º Ä·ÆÛÀÓ? \n\n " );
-				ÈÞ½Ä ;
-			»ç·Ê  0 :
-				¹ÝÈ¯ ;
-			±âº»°ª :
-				ÀÇ printf ( " \ n ¶È¹Ù·Î Á» ½á¶ó ¼Õ°¡¶ô ¹®Á¦ ÀÖÀ½? \ n \ n " );
-				ÈÞ½Ä ;
+				íœ´ì‹ ;
+			ì‚¬ë¡€  2 :
+				printf ( " \nã€ŽíŒŒê´´ã€í•´ì•¼ í•  êµ° \n\n " );
+				printf ( " \n í¬ ì˜!!! ë­”ë†ˆì— ì§‘ì´ì „ë‹¤ ì² ë¡œì–´ \n\n " );
+				íœ´ì‹ ;
+			ì‚¬ë¡€  3 :
+				printf ( " \n ì•„ë‹ˆ ì•„ë‹ˆ ë“ë°ì— í”Œë ˆì´ìŠ¤ ìº í¼ìž„? \n\n " );
+				íœ´ì‹ ;
+			ì‚¬ë¡€  0 :
+				ë°˜í™˜ ;
+			ê¸°ë³¸ê°’ :
+				ì˜ printf ( " \ n ë˜‘ë°”ë¡œ ì¢€ ì¨ë¼ ì†ê°€ë½ ë¬¸ì œ ìžˆìŒ? \ n \ n " );
+				íœ´ì‹ ;
 		}
-		½Ã½ºÅÛ ( " ÀÏ½Ã ÁßÁö " );
+		ì‹œìŠ¤í…œ ( " ì¼ì‹œ ì¤‘ì§€ " );
 	}	
 }	
 
-void  closet (){ // 5. ½½¶óÀÌµù µµ¾î
-	int ¸Þ´º;
+void  closet (){ // 5. ìŠ¬ë¼ì´ë”© ë„ì–´
+	int ë©”ë‰´;
 	
-	µ¿¾È ( 1 ) {
-		½Ã½ºÅÛ ( " cls " );
-		printf ( " [ºñ¹öÀÇ ¹æ]-[¿ÊÀå] \n\n " );
-		printf ( " ¹æÀ» °¡µæ Ã¤¿ï Á¤µµ ÀÌ´Ù. \n\n " );
-		printf ( " 1. ¼öÇöÀÌ ¿ÊÀ» ´Ù´Ù \n " );
-		printf ( " 2. µ¿ÇöÀÌ ¿ÊÀ» ´Ù´Ù \n " );
-		printf ( " 3. ¼®ÇöÀÌ ¿ÊÀ» ´Ù´Ù \n " );
-		printf ( " 4. ¼®ÁøÀÌ ¿ÊÀ» ´Ù´Ù \n " );
-		printf ( " 5. ½½¶óÀÌµùÀ» ºÎ¼ø´Ù \n " );
-		printf ( " 0. ÀÌÀü ±â \n " )
+	ë™ì•ˆ ( 1 ) {
+		ì‹œìŠ¤í…œ ( " cls " );
+		printf ( " [ë¹„ë²„ì˜ ë°©]-[ì˜·ìž¥] \n\n " );
+		printf ( " ë°©ì„ ê°€ë“ ì±„ìš¸ ì •ë„ ì´ë‹¤. \n\n " );
+		printf ( " 1. ìˆ˜í˜„ì´ ì˜·ì„ ë‹¤ë‹¤ \n " );
+		printf ( " 2. ë™í˜„ì´ ì˜·ì„ ë‹¤ë‹¤ \n " );
+		printf ( " 3. ì„í˜„ì´ ì˜·ì„ ë‹¤ë‹¤ \n " );
+		printf ( " 4. ì„ì§„ì´ ì˜·ì„ ë‹¤ë‹¤ \n " );
+		printf ( " 5. ìŠ¬ë¼ì´ë”©ì„ ë¶€ìˆœë‹¤ \n " );
+		printf ( " 0. ì´ì „ ê¸° \n " )
 		
 		printf ( " >> " );
-		scanf ( " %d " , & ¸Þ´º);
+		scanf ( " %d " , & ë©”ë‰´);
 		
-		½ºÀ§Ä¡ (¸Þ´º) {
-			»ç·Ê  1 :
+		ìŠ¤ìœ„ì¹˜ (ë©”ë‰´) {
+			ì‚¬ë¡€  1 :
 				if (isFindSilverKey) {
-					ÀÇ printf ( " \ n ¼öÇöÀÌ ¿Ê¿¡´Â ´õÀÌ»ó Ã£À» °Ô ¾ø¾î º¸ÀÎ´Ù ¾µ¸ð¾ø´Â ³ð . \ n \ n " );
-				} ´Ù¸¥ {
-					isFindSilverKey = Âü ;		// Àº»öÀÌ º¸ÀÌ³×¿ä
-					printf ( " \n ¼öÇöÀÌ ¿Ê¿¡ ÁÖ¸Ó´Ï Àº»ö¿­ ¿Í LPG ¸í¼¼ . \n\n " );
+					ì˜ printf ( " \ n ìˆ˜í˜„ì´ ì˜·ì—ëŠ” ë”ì´ìƒ ì°¾ì„ ê²Œ ì—†ì–´ ë³´ì¸ë‹¤ ì“¸ëª¨ì—†ëŠ” ë†ˆ . \ n \ n " );
+				} ë‹¤ë¥¸ {
+					isFindSilverKey = ì°¸ ;		// ì€ìƒ‰ì´ ë³´ì´ë„¤ìš”
+					printf ( " \n ìˆ˜í˜„ì´ ì˜·ì— ì£¼ë¨¸ë‹ˆ ì€ìƒ‰ì—´ ì™€ LPG ëª…ì„¸ . \n\n " );
 				}
-				ÈÞ½Ä ;
-			»ç·Ê  2 :
-				printf ( " \n µ¿ÇöÀÌ¿Ê»çÀÌ¿¡ ¸Þ¸ðÇÑ´Ù \n\n " );
+				íœ´ì‹ ;
+			ì‚¬ë¡€  2 :
+				printf ( " \n ë™í˜„ì´ì˜·ì‚¬ì´ì— ë©”ëª¨í•œë‹¤ \n\n " );
 				printf ( " \n 9 + 3 = 12 \n 5 + 10 = 3 \n 7 + 9= 4 \n 15 + 6 = ??? \n\n " );
-				printf ( " °³½±³ë¤» " );
-				ÈÞ½Ä ;
-			»ç·Ê  3 :
-				printf ( " \n ¼®ÇöÀÌ ¿Ê±êÂîÂî¹ß¸íÀÌ ÀÖ´Ù. \n\n " );
-				ÈÞ½Ä ;
-			»ç·Ê  4 :
-				printf ( " \n ¼®ÁøÀÌ ¿Ê±êÀº Àº»ö°ú ÆÈµµÃ»°ú ¹Ý¿µµÈ´Ù. \n\n " );
-				ÈÞ½Ä ;
-			»ç·Ê  5 :
-				printf ( " \n ÈÄÈÄÈÄ ¡º¿ÊÀå¡»ÀÌ¶ó... \n ºÎµÔ°¡ ÁêÁö.. \n Å©½î!!!!!!!!!!! \n Ã¶Á¦¿ÊÀåÀÎ ±îÄ¡ ½Ã°£..¶ö±î? \n\n " );
-				ÈÞ½Ä ;
-			»ç·Ê  0 :
-				¹ÝÈ¯ ;
-			±âº»°ª :
-				printf ( " \n ¾ß·¹¾ß·¹..¼Õ³ª¹ÚÇÏ³ª.. \n\n " );
-				ÈÞ½Ä ;
+				printf ( " ê°œì‰½ë…¸ã…‹ " );
+				íœ´ì‹ ;
+			ì‚¬ë¡€  3 :
+				printf ( " \n ì„í˜„ì´ ì˜·ê¹ƒì°Œì°Œë°œëª…ì´ ìžˆë‹¤. \n\n " );
+				íœ´ì‹ ;
+			ì‚¬ë¡€  4 :
+				printf ( " \n ì„ì§„ì´ ì˜·ê¹ƒì€ ì€ìƒ‰ê³¼ íŒ”ë„ì²­ê³¼ ë°˜ì˜ëœë‹¤. \n\n " );
+				íœ´ì‹ ;
+			ì‚¬ë¡€  5 :
+				printf ( " \n í›„í›„í›„ ã€Žì˜·ìž¥ã€ì´ë¼... \n ë¶€ë‘£ê°€ ì¥¬ì§€.. \n í¬ì˜!!!!!!!!!!! \n ì² ì œì˜·ìž¥ì¸ ê¹Œì¹˜ ì‹œê°„..ëž„ê¹Œ? \n\n " );
+				íœ´ì‹ ;
+			ì‚¬ë¡€  0 :
+				ë°˜í™˜ ;
+			ê¸°ë³¸ê°’ :
+				printf ( " \n ì•¼ë ˆì•¼ë ˆ..ì†ë‚˜ë°•í•˜ë‚˜.. \n\n " );
+				íœ´ì‹ ;
 		}
-		½Ã½ºÅÛ ( " ÀÏ½Ã ÁßÁö " );
+		ì‹œìŠ¤í…œ ( " ì¼ì‹œ ì¤‘ì§€ " );
 	}	
 }	
 
-void  door (){ // 6. Çù¹® ¹®
-	int ¸Þ´º;
+void  door (){ // 6. í˜‘ë¬¸ ë¬¸
+	int ë©”ë‰´;
 	
-	µ¿¾È ( 1 ) {
-		½Ã½ºÅÛ ( " cls " );
-		printf ( " [ºñ¹öÀÇ¹æ]-[Å»Ãâ±¸] \n\n " );
-		printf ( " ¿ÀÀ×¹®ÀÌ¿ä ¾ðÁ¦Âë. \n " );
-		printf ( " ¹®´äÀº ½áÀÖ½À´Ï´Ù. \n\n " );
+	ë™ì•ˆ ( 1 ) {
+		ì‹œìŠ¤í…œ ( " cls " );
+		printf ( " [ë¹„ë²„ì˜ë°©]-[íƒˆì¶œêµ¬] \n\n " );
+		printf ( " ì˜¤ìž‰ë¬¸ì´ìš” ì–¸ì œì¯¤. \n " );
+		printf ( " ë¬¸ë‹µì€ ì¨ìžˆìŠµë‹ˆë‹¤. \n\n " );
 		
-		printf ( " 1. ºí·¢¹Ú½º¸¦ ¹­´Â´Ù \n " );
-		printf ( " 2. ÀÔ·ÂÇÑ´Ù \n " );
-		printf ( " 0. ÀÌÀü ±â \n " )
+		printf ( " 1. ë¸”ëž™ë°•ìŠ¤ë¥¼ ë¬¶ëŠ”ë‹¤ \n " );
+		printf ( " 2. ìž…ë ¥í•œë‹¤ \n " );
+		printf ( " 0. ì´ì „ ê¸° \n " )
 		
 		printf ( " >> " );
-		scanf ( " %d " , & ¸Þ´º);
+		scanf ( " %d " , & ë©”ë‰´);
 		
-		½ºÀ§Ä¡ (¸Þ´º) {
-			»ç·Ê  1 :
-				printf ( " \n È­ÀÌÆ®º¸µå¿Í ½ÉÇÃÇÏ´Ù ? \n\n " );
-				printf ( " ¹æ¿¡ ¾º¿öÁÖ¼¼¿ä. \n\n " );
-				ÀÇ printf ( " ±×·¯°Ô ¿Ö »çÁø Âï¾î °¡Áö°í Ã³ ÀâÇô ¿È ¤»¤» \ n " );
-				ÈÞ½Ä ;
-			»ç·Ê  2 :
+		ìŠ¤ìœ„ì¹˜ (ë©”ë‰´) {
+			ì‚¬ë¡€  1 :
+				printf ( " \n í™”ì´íŠ¸ë³´ë“œì™€ ì‹¬í”Œí•˜ë‹¤ ? \n\n " );
+				printf ( " ë°©ì— ì”Œì›Œì£¼ì„¸ìš”. \n\n " );
+				ì˜ printf ( " ê·¸ëŸ¬ê²Œ ì™œ ì‚¬ì§„ ì°ì–´ ê°€ì§€ê³  ì²˜ ìž¡í˜€ ì˜´ ã…‹ã…‹ \ n " );
+				íœ´ì‹ ;
+			ì‚¬ë¡€  2 :
 				door_password ();
-				ÈÞ½Ä ;
-			»ç·Ê  0 :
-				¹ÝÈ¯ ;
-			±âº»°ª :
-				printf ( " \n ÀÀ ¾Æ´Ï¾ß ´Ù½ÃÇØ ¤»¤» \n\n " );
-				ÈÞ½Ä ;
+				íœ´ì‹ ;
+			ì‚¬ë¡€  0 :
+				ë°˜í™˜ ;
+			ê¸°ë³¸ê°’ :
+				printf ( " \n ì‘ ì•„ë‹ˆì•¼ ë‹¤ì‹œí•´ ã…‹ã…‹ \n\n " );
+				íœ´ì‹ ;
 		}
-		½Ã½ºÅÛ ( " ÀÏ½Ã ÁßÁö " );
+		ì‹œìŠ¤í…œ ( " ì¼ì‹œ ì¤‘ì§€ " );
 	}	
 }	
 
-¹«È¿  door_password () {
-	¹®ÀÚ ÆÐ½º[ 5 ] = " 6169 " , ÀÓ½Ã[ 5 ];
+ë¬´íš¨  door_password () {
+	ë¬¸ìž íŒ¨ìŠ¤[ 5 ] = " 6169 " , ìž„ì‹œ[ 5 ];
 	
-	½Ã½ºÅÛ ( " cls " );
-	printf ( " \n\n       [ ºñ¹Ð¹øÈ£ ] \n\n " );
+	ì‹œìŠ¤í…œ ( " cls " );
+	printf ( " \n\n       [ ë¹„ë°€ë²ˆí˜¸ ] \n\n " );
 	printf ( " >> " );
 	scanf ( " %s " , &temp);
 	
-	if (! strcmp (Åë°ú, ÀÓ½Ã)) {
-		½Ã½ºÅÛ ( " cls " );
-		printf ( " \n\n ¾Æ¤»¤»¤»¤» \ " ³× ¤»¤». \n );
-		printf ( " ¾Æº£½ºÆ® °íÇÁ³×. \n " );
-		printf ( " ¾Æ ±×³ªÀú³ª ¾îµð¿¡ ÀÖ³Ä ¤»¤» \n " );
-		ÀÇ printf ( " ¾Æ ¸ô¶û Áý °¡¼­ Âî´ßÀÌ³ª ¸Ô¾î¾ßÁö. \ n \ n " );
-		ÀÇ printf ( " ±× ÀÌÈÄ ÁÖÀÎ°øÀº ¿ì¿©°îÀý ³¡¿¡ Áý¿¡ µ¹¾Æ°¡ »óÇÑ Âî´ßÀ»º¸°í ºÐ³ëÇÏ¿´°í ... \ n \ n " );
-		printf ( " ±× ´ÙÀ½.. " );
-		printf ( " #1.½½ÇÂ ¿£µù " );
-		½Ã½ºÅÛ ( " ÀÏ½Ã ÁßÁö " );
-		Ãâ±¸ ( 0 );
-	} ´Ù¸¥ {
-		printf ( " \n\n ¿Ë¸ð¸§ ¤»¤» ¾Æ¤»¤» ³Ê¸¸¸ð¸§ ¤»¤» \n\n " );
-		¹ÝÈ¯ ;	
+	if (! strcmp (í†µê³¼, ìž„ì‹œ)) {
+		ì‹œìŠ¤í…œ ( " cls " );
+		printf ( " \n\n ì•„ã…‹ã…‹ã…‹ã…‹ \ " ë„¤ ã…‹ã…‹. \n );
+		printf ( " ì•„ë² ìŠ¤íŠ¸ ê³ í”„ë„¤. \n " );
+		printf ( " ì•„ ê·¸ë‚˜ì €ë‚˜ ì–´ë””ì— ìžˆëƒ ã…‹ã…‹ \n " );
+		ì˜ printf ( " ì•„ ëª°ëž‘ ì§‘ ê°€ì„œ ì°Œë‹­ì´ë‚˜ ë¨¹ì–´ì•¼ì§€. \ n \ n " );
+		ì˜ printf ( " ê·¸ ì´í›„ ì£¼ì¸ê³µì€ ìš°ì—¬ê³¡ì ˆ ëì— ì§‘ì— ëŒì•„ê°€ ìƒí•œ ì°Œë‹­ì„ë³´ê³  ë¶„ë…¸í•˜ì˜€ê³  ... \ n \ n " );
+		printf ( " ê·¸ ë‹¤ìŒ.. " );
+		printf ( " #1.ìŠ¬í”ˆ ì—”ë”© " );
+		ì‹œìŠ¤í…œ ( " ì¼ì‹œ ì¤‘ì§€ " );
+		ì¶œêµ¬ ( 0 );
+	} ë‹¤ë¥¸ {
+		printf ( " \n\n ì˜¹ëª¨ë¦„ ã…‹ã…‹ ì•„ã…‹ã…‹ ë„ˆë§Œëª¨ë¦„ ã…‹ã…‹ \n\n " );
+		ë°˜í™˜ ;	
 	}
 }
 
